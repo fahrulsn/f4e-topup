@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="New Logo.png" />
+    <link rel="stylesheet" href="topup.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>Top Up Genshin Impact</title>
+  </head>
+  <body>
+    <header class="flex-evenly">
+      <div class="nav-toggle flex-evenly">
+        <a href="#" id="hamburg"><i data-feather="menu"></i></a>
+      </div>
+      <div class="nav-left flex-evenly">
+        <a href="index.html">Home</a>
+        <a href="">Boosting</a>
+        <a href="">Top-Up</a>
+        <a href="">Tentang Kami</a>
+      </div>
+      <div class="header-logo flex-center">
+        <img src="Logo-F4E-with-Title.png" alt="" />
+      </div>
+      <div class="nav-right flex-center">
+        <div class="search flex-center">
+          <i class="search-icon" data-feather="search"></i>
+          <input class="search-box" type="search" placeholder="Search" />
+        </div>
+      </div>
+    </header>
+    <div id="container">
+      <div class="game-info">
+        <div class="game-img flex-center">
+          <img src="ServerBanner.png" alt="" />
+        </div>
+        <div class="steps">
+          <h1>Genshin Impact</h1>
+          <p>
+            Top up Genshin Impact resmi miHoYo harga paling murah. Cara beli
+            crystal dan b-chip Honkai Impact 3 termurah : <br />1. Masukkan ID
+            <br />2. Pilih Nominal <br />3. Pilih Metode Pembayaran <br />4.
+            Klik Order Now & lakukan Pembayaran <br />5. Tunggu hingga proses
+            selesai
+          </p>
+        </div>
+        <div class="rekomendasi">
+          <h3>Game lainnya</h3>
+          <div class="rek-container">
+            <img src="icon/Icon-HonkaiStarRail.jpg" alt="" />
+            <h3>Honkai Star Rail</h3>
+          </div>
+          <div class="rek-container">
+            <img src="icon/Icon-HonkaiImpact3rd.png" alt="" />
+            <h3>Honkai Impact 3</h3>
+          </div>
+          <div class="rek-container">
+            <img src="icon/Icon-BlueArchive.png" alt="" />
+            <h3>Blue Archive</h3>
+          </div>
+          <div class="rek-container">
+            <img src="icon/Icon-MobileLegend.png" alt="" />
+            <h3>Mobile Legends</h3>
+          </div>
+          <div class="rek-container">
+            <img src="icon/Icon-Freefire.png" alt="" />
+            <h3>Free Fire</h3>
+          </div>
+        </div>
+      </div>
+      <div class="top-up">
+        <div class="input-container">
+          <div class="number flex-center">
+            <h1>1</h1>
+          </div>
+          <h2>Masukkan UID dan pilih server</h2>
+          <input class="uid" type="number" />
+          <select class="server" name="server" id="server">
+            <option value="asia">Asia</option>
+            <option value="europe">Europe</option>
+            <option value="hk/tw">HK/TW</option>
+            <option value="na">North America</option>
+          </select>
+          <p>
+            Untuk menemukan UID Anda, masuk pakai akun Anda. Klik pada tombol
+            profile di pojok kiri atas layar. Temukan UID dibawah avatar.
+            Masukan UID Anda di sini. Selain itu, Anda juga dapat temukan UID
+            Anda di pojok bawah kanan layar.
+          </p>
+        </div>
+        <div class="input-container">
+          <div class="number flex-center">
+            <h1>2</h1>
+          </div>
+          <h2>Pilih Nominal Top-Up</h2>
+          <div class="nominal">
+            <div data-value="10000" class="nom-container">
+              <img src="img/primogem.png" alt="" />
+              <p>100</p>
+              <p>Rp. 10000</p>
+            </div>
+            <div data-value="20000" class="nom-container">
+              <img src="img/primogem.png" alt="" />
+              <p>200</p>
+              <p>Rp. 20000</p>
+            </div>
+            <div data-value="30000" class="nom-container">
+              <img src="img/primogem.png" alt="" />
+              <p>300</p>
+              <p>Rp. 30000</p>
+            </div>
+            <div data-value="40000" class="nom-container">
+              <img src="img/primogem.png" alt="" />
+              <p>400</p>
+              <p>Rp. 40000</p>
+            </div>
+            <div data-value="50000" class="nom-container">
+              <img src="img/primogem.png" alt="" />
+              <p>500</p>
+              <p>Rp. 50000</p>
+            </div>
+          </div>
+        </div>
+        <div class="input-container">
+          <div class="number flex-center">
+            <h1>3</h1>
+          </div>
+          <h2>Pembayaran</h2>
+          <div class="metode" data-value="dana">
+            <img src="img/dana.png" alt="" />
+            <div class="total-bayar"></div>
+          </div>
+          <div class="metode" data-value="gopay">
+            <img src="img/gopay.png" alt="" />
+            <div class="total-bayar"></div>
+          </div>
+          <div class="metode" data-value="ovo">
+            <img src="img/ovo.png" alt="" />
+            <div class="total-bayar"></div>
+          </div>
+          <button class="btn-bayar"><h1>Bayar Sekarang</h1></button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footerleft flex-center">
+        <h1>Butuh Bantuan?</h1>
+        <h2 class="flex-center">
+          <i class="icon" data-feather="message-square"></i>Hubungi Kami
+        </h2>
+      </div>
+      <div class="footerright flex-center">
+        <h1>Dapatkan Berita</h1>
+        <div class="footericon flex-center">
+          <i class="icon" data-feather="instagram"></i>
+          <i class="icon" data-feather="facebook"></i>
+          <img class="icon" alt="Discord" src="Discord.png" />
+        </div>
+      </div>
+    </footer>
+    <script>
+      feather.replace();
+      const nominal = document.getElementsByClassName("nom-container");
+      const total = document.getElementsByClassName("total-bayar");
+      const metode = document.getElementsByClassName("metode");
+
+      function addActive() {
+        for (const element of nominal) {
+          element.className = element.className.replace("active", "");
+        }
+
+        this.classList.add("active");
+        for (const element of total) {
+          element.innerHTML =
+            "<p>Total Bayar <br> Rp." + this.dataset.value + "</p>";
+        }
+      }
+      function addActiveMetode() {
+        for (const element of metode) {
+          element.className = element.className.replace("active", "");
+        }
+        this.classList.add("active");
+      }
+
+      for (const element of nominal) {
+        element.addEventListener("click", addActive);
+      }
+      for (const element of metode) {
+        element.addEventListener("click", addActiveMetode);
+      }
+
+      const navLeft = document.querySelector(".nav-left");
+      document.querySelector("#hamburg").onclick = () => {
+        navLeft.classList.toggle("active");
+      };
+      const hamburg = document.querySelector("#hamburg");
+      document.addEventListener("click", (e) => {
+        if (!hamburg.contains(e.target) && !navLeft.contains(e.target)) {
+          navLeft.classList.remove("active");
+        }
+      });
+
+      const searchBox = document.querySelector(".search-box");
+      document.querySelector(".search-icon").onclick = () => {
+        searchBox.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>

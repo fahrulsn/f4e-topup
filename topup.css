@@ -1,0 +1,347 @@
+:root {
+  --primary: #460000;
+  --secondary: #1c0000;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  /* border: 1px solid red; */
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  transition: 0.3s ease;
+}
+a:visited {
+  color: inherit;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--secondary);
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-evenly {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header {
+  background-color: var(--primary);
+  height: 12vh;
+  position: fixed;
+  z-index: 999;
+}
+header .nav-toggle {
+  display: none;
+  color: white;
+}
+header .nav-left {
+  color: white;
+}
+header .nav-left a {
+  margin: 0.2rem;
+}
+header .header-logo,
+.nav-left,
+.nav-right,
+.nav-toggle {
+  width: 30%;
+}
+header .header-logo img {
+  width: 60%;
+}
+header .nav-right {
+  color: white;
+}
+header .nav-right .search {
+  width: 100%;
+}
+header .nav-right .search .search-box {
+  height: 2rem;
+  border-radius: 0.7rem;
+  padding: 0.2rem;
+  margin: 0.2rem 1rem;
+  width: 80%;
+}
+#container {
+  height: auto;
+  display: flex;
+  padding: 12vh 0 3rem 0;
+  justify-content: center;
+}
+.game-info {
+  height: 100%;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+.top-up {
+  height: 100%;
+  width: 60%;
+}
+#container .game-info .game-img {
+  width: 85%;
+  object-fit: contain;
+  margin: 2rem auto;
+}
+#container .game-info .game-img img {
+  width: 100%;
+  border-radius: 1rem;
+  border: 3px solid white;
+}
+#container .game-info .steps,
+.rekomendasi {
+  color: white;
+  padding: 1rem 2rem;
+  background-color: rgba(173, 0, 0, 0.4);
+  border-radius: 1rem;
+  margin: 0 2rem 2rem 2rem;
+}
+
+#container .game-info .rekomendasi .rek-container {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  transition: 0.3s ease;
+}
+#container .game-info .rekomendasi .rek-container:hover {
+  background-color: rgb(125, 0, 0);
+}
+#container .game-info .rekomendasi .rek-container img {
+  width: 20%;
+  border-radius: 20%;
+  margin: 1rem;
+}
+#container .top-up {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+#container .input-container {
+  background-color: white;
+  width: 90%;
+  padding: 3rem;
+  margin: 2rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
+#container .input-container .number {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--primary);
+  position: absolute;
+  top: -1.5rem;
+  border-radius: 50%;
+  border: 3.5px solid white;
+  color: white;
+}
+#container .input-container p {
+  font-size: 0.8rem;
+}
+#container .input-container .uid,
+.server {
+  height: 3rem;
+  border: 3px solid grey;
+  border-radius: 0.7rem;
+  text-align: center;
+  font-size: 1rem;
+  margin: 0.8rem 0;
+}
+#container .input-container .nominal {
+  display: flex;
+  flex-wrap: wrap;
+}
+#container .input-container .nominal .nom-container.active {
+  background-color: #85adff;
+  border-color: #104abe;
+}
+#container .input-container .nominal .nom-container {
+  width: 16%;
+  min-width: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid grey;
+  border-radius: 1rem;
+  margin: 0.7rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+#container .input-container .nominal img {
+  width: 50%;
+  margin-bottom: 0.4rem;
+}
+#container .input-container .metode {
+  width: 100%;
+  height: 7rem;
+  border: 1px solid grey;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  cursor: pointer;
+}
+#container .input-container .metode.active {
+  background-color: #a5c3ff;
+  border-color: #104abe;
+}
+#container .input-container .metode img {
+  height: 60%;
+}
+#container .input-container .metode .total-bayar p {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+#container .input-container .btn-bayar {
+  background-color: var(--primary);
+  width: 100%;
+  padding: 1rem;
+  font-size: 0.7rem;
+  color: white;
+  border-radius: 1rem;
+  margin: 1rem 0;
+}
+footer {
+  display: flex;
+  width: 100%;
+  height: 25vh;
+  background-color: #0e0000;
+  color: white;
+}
+
+.footerleft {
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.footerleft h2 {
+  padding: 0.7rem;
+  border: 3px solid white;
+  border-radius: 15px;
+  margin: 0.5rem 0;
+}
+
+.footerright {
+  width: 40%;
+  height: 100%;
+}
+
+.footerright h1 {
+  font-size: 2rem;
+}
+
+.footericon {
+  margin-left: 2rem;
+}
+
+.footerright .icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 0 0.3rem;
+}
+.footerleft .icon {
+  margin: 0 0.3rem;
+}
+
+/* media query */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 80%;
+  }
+}
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 75%;
+  }
+  header .nav-toggle {
+    display: flex;
+  }
+  header .nav-left {
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    right: 0;
+    top: -500%;
+    line-height: 3rem;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: 0.3s ease;
+    align-items: center;
+    font-size: 1.4rem;
+  }
+  header .nav-left.active {
+    top: 0;
+  }
+  header .header-logo {
+    width: 90%;
+  }
+  header .header-logo img {
+    width: 100%;
+  }
+  header .nav-right .search .search-box {
+    display: none;
+  }
+  header .nav-right .search .search-box.active {
+    display: block;
+    position: absolute;
+    bottom: -50%;
+    padding: 1rem;
+    left: 7%;
+    height: 4rem;
+  }
+  #container {
+    flex-wrap: wrap;
+  }
+  #container .game-info .game-img {
+    width: 90%;
+  }
+  .game-info {
+    width: 95%;
+  }
+  .top-up {
+    width: 90%;
+  }
+  .input-container .nominal {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .input-container .uid {
+    width: 55%;
+  }
+  .input-container .server {
+    width: 40%;
+  }
+  footer {
+    flex-direction: column;
+  }
+  .footerleft {
+    width: 100%;
+  }
+  .footerright {
+    width: 100%;
+  }
+}
+/* mobile */
+@media (max-width: 576px) {
+  html {
+    font-size: 68%;
+  }
+}

@@ -1,0 +1,331 @@
+* {
+  font-family: "Poppins", sans-serif;
+  /* border: 1px solid red; */
+  /* margin: 0; */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+  background-color: #460000;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+a {
+  color: inherit;
+}
+.nav_left {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 33%;
+  flex-wrap: wrap;
+}
+.nav_hamburg {
+  display: none;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 33%;
+  color: white;
+}
+.nav_left a {
+  color: white;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+#hamburg {
+  display: inline-block;
+}
+.search-icon {
+  margin: 0.4rem;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 33%;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.nav_right {
+  display: flex;
+  height: 100%;
+  width: 33%;
+}
+
+.search-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-container input {
+  height: 30%;
+  width: 70%;
+  border-radius: 7px;
+}
+.search-box {
+  display: none;
+}
+.container {
+  height: auto;
+  background-color: #1c0000;
+  padding-top: calc(15vh + 4rem);
+}
+
+.jumbotron {
+  margin: auto;
+  height: 75vh;
+  width: 70%;
+  background-color: yellow;
+  border-radius: 1.5rem;
+  background-image: url("ServerBanner.png");
+  background-size: cover;
+  background-position: center;
+  border: 5px solid white;
+}
+
+.game_list {
+  flex-wrap: wrap;
+  margin: auto;
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+
+.game {
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.game_img {
+  flex-wrap: wrap;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  row-gap: 1.5rem;
+}
+
+.game_img a {
+  width: 15%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.game_img a img {
+  object-fit: contain;
+  width: 100%;
+  border-radius: 1.5rem;
+  border: 3px solid white;
+}
+
+.about {
+  margin: auto;
+  padding-bottom: 5rem;
+  width: 70%;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.about h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  /* line-height: 2rem; */
+}
+.about h2 {
+  margin: 1rem 0;
+}
+.about .info {
+  padding: 1rem;
+  border: 3px solid white;
+  border-radius: 15px;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  height: 25vh;
+  background-color: #0e0000;
+  color: white;
+}
+
+.footerleft {
+  justify-content: center;
+  display: flex;
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.footerleft h2 {
+  padding: 0.7rem;
+  border: 3px solid white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerright {
+  justify-content: space-evenly;
+  width: 40%;
+  height: 100%;
+  display: flex;
+}
+
+.footerright h1 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.footericon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.footerright .icon {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+/* media query */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+  .game_img a {
+    width: 20%;
+  }
+}
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+  #hamburg {
+    display: inline-block;
+  }
+  header {
+    height: 10vh;
+  }
+  .nav_left {
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    right: 0;
+    top: -800%;
+    line-height: 3rem;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: 0.3s ease;
+    align-items: center;
+    font-size: 1.7rem;
+  }
+  .search-container input {
+    display: none;
+  }
+  .logo {
+    width: 100%;
+  }
+  .logo img {
+    height: 60%;
+  }
+  .nav_hamburg {
+    display: flex;
+  }
+  .nav_left.active {
+    top: 0;
+  }
+  .search-box {
+    display: flex;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  .search-box.active {
+    top: 11vh;
+  }
+  .search-box input {
+    height: 4rem;
+    width: 70%;
+    border-radius: 7px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .jumbotron {
+    height: 40vh;
+    width: 90%;
+  }
+  .game_list {
+    width: 90%;
+  }
+  .game_img a {
+    width: 20%;
+  }
+  .about {
+    width: 90%;
+  }
+  .about .info p {
+    font-size: 1.5rem;
+  }
+  footer {
+    flex-direction: column;
+  }
+  .footerleft {
+    width: 100%;
+  }
+  .footerright {
+    width: 100%;
+  }
+}
+/* mobile */
+@media (max-width: 576px) {
+  html {
+    font-size: 60%;
+  }
+  .jumbotron {
+    height: 30vh;
+  }
+  .game_img a {
+    width: 30%;
+  }
+}
