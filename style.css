@@ -1,7 +1,6 @@
 * {
   font-family: "Poppins", sans-serif;
   /* border: 1px solid red; */
-  /* margin: 0; */
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -17,7 +16,7 @@ header {
   width: 100%;
   z-index: 999;
 }
-a {
+a:visited {
   color: inherit;
 }
 .nav_left {
@@ -85,19 +84,49 @@ a {
 .container {
   height: auto;
   background-color: #1c0000;
-  padding-top: calc(15vh + 4rem);
+  padding-top: calc(12vh + 4rem);
+}
+.slide {
+  width: 90%;
+  text-align: center;
+  margin: 0px auto;
+  z-index: 0;
+  height: auto;
 }
 
 .jumbotron {
-  margin: auto;
-  height: 75vh;
-  width: 70%;
-  background-color: yellow;
+  width: 75%;
+  padding-bottom: 1rem;
+  margin: 0px auto;
+}
+.dot-container {
+  width: 90%;
+  margin: 0 auto;
+}
+.dot {
+  height: 0.8rem;
+  width: 0.8rem;
+  margin: 0 5px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.dot.active {
+  background-color: grey;
+}
+.jumbotron img {
+  margin: 0px auto;
+  width: 100%;
+  background-color: white;
   border-radius: 1.5rem;
-  background-image: url("ServerBanner.png");
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   border: 5px solid white;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
 }
 
 .game_list {
@@ -130,12 +159,14 @@ a {
 }
 
 .game_img a {
-  width: 15%;
+  width: 16%;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   margin: 1rem;
+  row-gap: 0.5rem;
 }
 
 .game_img a img {
@@ -144,7 +175,14 @@ a {
   border-radius: 1.5rem;
   border: 3px solid white;
 }
-
+.game_title {
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+}
 .about {
   margin: auto;
   padding-bottom: 5rem;
@@ -221,7 +259,14 @@ footer {
   height: 2.5rem;
   width: 2.5rem;
 }
-
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* media query */
 
 /* laptop */
@@ -292,8 +337,7 @@ footer {
     padding: 0 1rem;
   }
   .jumbotron {
-    height: 40vh;
-    width: 90%;
+    width: 100%;
   }
   .game_list {
     width: 90%;
@@ -323,7 +367,7 @@ footer {
     font-size: 60%;
   }
   .jumbotron {
-    height: 30vh;
+    width: 100%;
   }
   .game_img a {
     width: 30%;

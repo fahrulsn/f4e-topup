@@ -39,42 +39,93 @@
       </div>
     </header>
     <div class="container">
-      <div class="jumbotron"></div>
+      <div class="slide">
+        <div class="jumbotron fade"><img src="ServerBanner.jpg" /></div>
+        <div class="jumbotron fade">
+          <img src="Pricelist/PriceList1.jpg" />
+        </div>
+        <div class="jumbotron fade">
+          <img src="Pricelist/PriceList2.jpg" />
+        </div>
+        <div class="jumbotron fade">
+          <img src="Pricelist/PriceList3.jpg" />
+        </div>
+        <div class="jumbotron fade">
+          <img src="Pricelist/PriceList4.jpg" />
+        </div>
+        <div class="jumbotron fade">
+          <img src="Pricelist/PriceList5.jpg" />
+        </div>
+        <div class="jumbotron fade">
+          <img src="Pricelist/PriceList6.jpg" />
+        </div>
+        <div class="jumbotron fade">
+          <img src="Pricelist/PriceList7.jpg" />
+        </div>
+        <div class="jumbotron fade">
+          <img src="Pricelist/PriceList8.jpg" />
+        </div>
+        <div class="jumbotron fade">
+          <img src="Pricelist/PriceList9.jpg" />
+        </div>
+      </div>
+      <div class="dot-container" style="text-align: center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
       <div class="game_list">
         <div class="game">
           <h1>Game List</h1>
         </div>
         <div class="game_img">
           <a href="genshin.html"
-            ><img src="icon/Icon-TowerofFantasy.png" alt="Tower Of Fantasy"
-          /></a>
+            ><img src="icon/Icon-TowerofFantasy.png" alt="Tower Of Fantasy" />
+            <h4 class="game_title">Tower of Fantasy</h4></a
+          >
           <a href="genshin.html"
-            ><img src="icon/Icon-HonkaiStarRail.jpg" alt="Honkai Star Rail"
-          /></a>
+            ><img src="icon/Icon-HonkaiStarRail.jpg" alt="Honkai Star Rail" />
+            <h4 class="game_title">Honkai Star Rail</h4></a
+          >
           <a href="genshin.html"
-            ><img src="icon/Icon-HonkaiImpact3rd.png" alt="Honkai Impact 3rd"
-          /></a>
+            ><img src="icon/Icon-HonkaiImpact3rd.png" alt="Honkai Impact 3rd" />
+            <h4 class="game_title">Honkai Impact 3rd</h4></a
+          >
           <a href="genshin.html"
-            ><img src="icon/Icon-Genshin.png" alt="Genshin Impact"
-          /></a>
+            ><img src="Icon/Icon-Genshin.png" alt="Genshin Impact" />
+            <h4 class="game_title">Genshin Impact</h4></a
+          >
           <a href="genshin.html"
-            ><img src="icon/Icon-Nikke.png" alt="Nikke"
-          /></a>
+            ><img src="icon/Icon-Nikke.png" alt="Nikke" />
+            <h4 class="game_title">Nikke</h4></a
+          >
           <a href="genshin.html"
-            ><img src="icon/Icon-BlueArchive.png" alt="Blue Archive"
-          /></a>
+            ><img src="Icon/Icon-BlueArchive.png" alt="Blue Archive" />
+            <h4 class="game_title">Blue Archive</h4></a
+          >
           <a href="genshin.html"
-            ><img src="icon/Icon-Arknight.png" alt="Arknight"
-          /></a>
+            ><img src="Icon/Icon-Arknight.png" alt="Arknight" />
+            <h4 class="game_title">Arknight</h4></a
+          >
           <a href="genshin.html"
-            ><img src="icon/Icon-MobileLegend.png" alt="Mobile Legend"
-          /></a>
+            ><img src="Icon/Icon-MobileLegend.png" alt="Mobile Legend" />
+            <h4 class="game_title">Mobile Legends</h4></a
+          >
           <a href="genshin.html"
-            ><img src="icon/Icon-WildRift.jpg" alt="League Of Legends"
-          /></a>
+            ><img src="Icon/Icon-WildRift.jpg" alt="League Of Legends" />
+            <h4 class="game_title">WildRift</h4></a
+          >
           <a href="genshin.html"
-            ><img src="icon/Icon-AOV.png" alt="Arena Of Valor"
-          /></a>
+            ><img src="Icon/Icon-AOV.png" alt="Arena Of Valor" />
+            <h4 class="game_title">Arena of Valor</h4></a
+          >
         </div>
       </div>
       <div class="about">
@@ -111,6 +162,29 @@
     </footer>
     <script>
       feather.replace();
+
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("jumbotron");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 8000);
+        console.log(dots); // Change image every x seconds
+      }
     </script>
     <script src="script.js"></script>
   </body>
